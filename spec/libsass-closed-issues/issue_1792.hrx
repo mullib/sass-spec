@@ -10,20 +10,20 @@ test {
 }
 <===> output.css
 test {
-  test1: 12px;
-  test2: 14px;
-}
-
-<===> output-dart-sass.css
-test {
   test1: 0.125in;
   test2: 0.1458333333in;
 }
 
-<===> warning
-DEPRECATION WARNING: Using / for division is deprecated and will be removed in Dart Sass 2.0.0.
+<===> output-libsass.css
+test {
+  test1: 12px;
+  test2: 14px;
+}
 
-Recommendation: math.div(3px * 4in, 1in)
+<===> warning
+DEPRECATION WARNING: Using / for division outside of calc() is deprecated and will be removed in Dart Sass 2.0.0.
+
+Recommendation: math.div(3px * 4in, 1in) or calc((3px * 4in) / 1in)
 
 More info and automated migrator: https://sass-lang.com/d/slash-div
 
@@ -33,9 +33,9 @@ More info and automated migrator: https://sass-lang.com/d/slash-div
   '
     input.scss 2:10  root stylesheet
 
-DEPRECATION WARNING: Using / for division is deprecated and will be removed in Dart Sass 2.0.0.
+DEPRECATION WARNING: Using / for division outside of calc() is deprecated and will be removed in Dart Sass 2.0.0.
 
-Recommendation: math.div(1px * 2in + 3px * 4in, 1in)
+Recommendation: math.div((1px * 2in) + (3px * 4in), 1in) or calc(((1px * 2in) + (3px * 4in)) / 1in)
 
 More info and automated migrator: https://sass-lang.com/d/slash-div
 

@@ -520,6 +520,26 @@ a {
 
 <===>
 ================================================================================
+<===> list/nested/empty_bracketed/bracketed/input.scss
+a {b: inspect([[] []])}
+
+<===> list/nested/empty_bracketed/bracketed/output.css
+a {
+  b: [[] []];
+}
+
+<===>
+================================================================================
+<===> list/nested/empty_bracketed/unbracketed/input.scss
+a {b: inspect(([] []))}
+
+<===> list/nested/empty_bracketed/unbracketed/output.css
+a {
+  b: [] [];
+}
+
+<===>
+================================================================================
 <===> list/nested/space/in_space/bracketed/options.yml
 ---
 :todo:
@@ -822,6 +842,16 @@ a {
 a {
   value: [1, 2] / [3, 4];
   type: string;
+}
+
+<===>
+================================================================================
+<===> inspect/empty/bracketed/input.scss
+a {b: inspect([])}
+
+<===> inspect/empty/bracketed/output.css
+a {
+  b: [];
 }
 
 <===>

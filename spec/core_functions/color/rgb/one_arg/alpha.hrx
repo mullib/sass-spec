@@ -13,7 +13,7 @@ a {b: rgb(190 173 237 / 1)}
 
 <===> in_gamut/opaque/output.css
 a {
-  b: #beaded;
+  b: rgb(190, 173, 237);
 }
 
 <===>
@@ -99,7 +99,7 @@ a {b: rgb(0 0 0 / 1.1)}
 
 <===> clamped/alpha/above/output.css
 a {
-  b: black;
+  b: rgb(0, 0, 0);
 }
 
 <===>
@@ -114,20 +114,20 @@ a {
 
 <===>
 ================================================================================
-<===> clamped/alpha/above/percent/input.scss
+<===> clamped/alpha/percent/above/input.scss
 a {b: rgb(0 0 0 / 250%)}
 
-<===> clamped/alpha/above/percent/output.css
+<===> clamped/alpha/percent/above/output.css
 a {
-  b: black;
+  b: rgb(0, 0, 0);
 }
 
 <===>
 ================================================================================
-<===> clamped/alpha/below/percent/input.scss
+<===> clamped/alpha/percent/below/input.scss
 a {b: rgb(0 0 0 / -10%)}
 
-<===> clamped/alpha/below/percent/output.css
+<===> clamped/alpha/percent/below/output.css
 a {
   b: rgba(0, 0, 0, 0);
 }
